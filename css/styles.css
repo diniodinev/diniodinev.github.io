@@ -48,7 +48,7 @@ a:hover {
 }
 
 .btn {
- text-decoration: none;
+    text-decoration: none;
     background: #EF233C;
     color: white;
     padding: 10px;
@@ -60,6 +60,7 @@ a:hover {
     bottom: 0;
     right: 0;
 }
+
 .content-wrap {
     max-width: 950px;
     margin: 0 auto;
@@ -85,12 +86,13 @@ a:hover {
 .job-description {
     margin-bottom: 25px;
 }
+
 .job-description p:first-of-type {
     margin-top: 0;
 }
 
-p + h3{
-    margin-top:  25px;
+p + h3 {
+    margin-top: 25px;
 }
 
 /* Header and Footer
@@ -105,6 +107,7 @@ header {
     padding-top: 50px;
     position: relative;
 }
+
 header h1, header h2 {
     color: #EDF2F4;
     margin: 0;
@@ -122,13 +125,26 @@ footer {
 .contact-info a {
     padding: 10px;
     display: inline-block;
+    background-color: whitesmoke;
+    color: blueviolet;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+i.fa, i.fab, i.fas {
+    margin: 15px;
+    size: 50px;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px #ccc;
+    vertical-align: top;
+
 }
 
 nav {
     text-align: center;
     background: white;
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
 }
 
@@ -140,6 +156,13 @@ nav a {
     font-weight: 700;
 }
 
+.copyright {
+    display: inline-block;
+    margin: 20px;
+    text-shadow: 1px 1px 1px #ccc;
+    vertical-align: top;
+}
+
 /* Work Experience
 -------------------------*/
 .work {
@@ -147,7 +170,7 @@ nav a {
 }
 
 h3 ~ p {
-  margin: 0;
+    margin: 0;
 }
 
 /* Education
