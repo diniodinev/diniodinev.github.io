@@ -156,6 +156,11 @@ nav a {
     font-weight: 700;
 }
 
+.background {
+    background-image: url('https://bsatsmc.org/wp-content/uploads/revslider/slider_2/6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .copyright {
     display: inline-block;
     margin: 20px;
