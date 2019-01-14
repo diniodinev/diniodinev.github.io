@@ -53,6 +53,7 @@ a:hover {
     color: white;
     padding: 10px;
     display: inline-block;
+    font-size:0.875em;
 }
 
 .download {
@@ -66,18 +67,6 @@ a:hover {
     margin: 0 auto;
     padding: 60px 50px;
     overflow: hidden;
-
-}
-
-.col-narrow {
-    width: 30%;
-    float: left;
-}
-
-.col-wide {
-    width: 70%;
-    float: left;
-    padding-left: 20px;
 }
 
 .uppercase {
@@ -94,12 +83,13 @@ a:hover {
 
 p + h3 {
     margin-top: 25px;
+    font-size:0.875em
 }
 
 /* Header and Footer
 -------------------------*/
 header, footer {
-    background: linear-gradient(rgba(141,153,174,0.8),rgba(141,153,174,0.5)),
+    background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
     url('../images/title_background.jpg') no-repeat fixed;
     background-size: cover;
 }
@@ -163,6 +153,7 @@ nav a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .copyright {
     display: inline-block;
     margin: 20px;
@@ -183,7 +174,62 @@ h3 ~ p {
 /* Education
 -------------------------*/
 .education {
-    background: linear-gradient(rgba(141,153,174,0.8),rgba(141,153,174,0.5)),
+    background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
     url(https://images.unsplash.com/photo-1519429753079-3b0f0a95dea8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat fixed;
     background-size: cover;
+}
+
+/* Media Queries */
+@media (min-width: 900px) {
+    .col-narrow {
+        width: 30%;
+        float: left;
+    }
+
+    .col-wide {
+        width: 70%;
+        float: left;
+        padding-left: 20px;
+    }
+    .profile-img {
+        width: 30%;
+    }
+}
+@media (max-width: 899px){
+    header {
+        text-align: center;
+    }
+    .profile-img {
+        width: 25%;
+    }
+    h1, h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 50px;
+    }
+    .content-wrap {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 60px 50px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 660px) {
+    .profile-img {
+        width: 45%;
+    }
+    h1, h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+    }
+    nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        display: inline-block;
+        font-weight: 700;
+    }
+  .download {
+      font-weight: 100;
+  }
 }
