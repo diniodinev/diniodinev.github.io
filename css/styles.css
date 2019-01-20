@@ -258,6 +258,7 @@ h3 ~ p {
 
     .download {
         font-weight: 100;
+        z-index: 100;
     }
 }
 
@@ -271,7 +272,6 @@ h1 {
 }
 
 .hero {
-    background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
 / / min-height: 100 vh;
     min-height: 30rem;
     position: relative;
