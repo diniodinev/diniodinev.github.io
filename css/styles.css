@@ -54,6 +54,7 @@ a:hover {
     padding: 10px;
     display: inline-block;
     font-size: 0.875em;
+    z-index: 2;
 }
 
 .download {
@@ -142,6 +143,7 @@ nav {
     animation-duration: 1s;
     animation-delay: 0.1s;
     animation-timing-function: ease-in;
+    z-index: 100;
 }
 
 nav a {
@@ -258,7 +260,6 @@ h3 ~ p {
 
     .download {
         font-weight: 100;
-        z-index: 100;
     }
 }
 
@@ -314,6 +315,30 @@ h1 {
     100% {
         transform: translateY(0);
     }
+}
+
+@keyframes routateButton {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 
 }
+
+.fa-arrow-alt-circle-down {
+    animation: routateButton;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+
+
+
 
