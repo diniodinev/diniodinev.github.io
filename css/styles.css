@@ -89,7 +89,7 @@ p + h3 {
 
 /* Header and Footer
 -------------------------*/
-header, footer {
+header {
     background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
     url('../images/title_background.jpg') no-repeat fixed;
     background-size: cover;
@@ -106,6 +106,10 @@ header h1, header h2 {
     margin: 0;
 }
 
+p.top-title {
+    color: whitesmoke;
+}
+
 .profile-img {
     border-radius: 50%;
 }
@@ -116,21 +120,101 @@ footer {
 }
 
 .contact-info a {
-    padding: 10px;
     display: inline-block;
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     color: blueviolet;
-    border-radius: 25px;
     text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 15vh;
+    alignment: center;
+    margin-top: 4em;
 }
 
-i.fa, i.fab, i.fas {
-    margin: 15px;
+i.fab, i.fas {
+    margin: 5px;
     size: 50px;
     font-size: 2em;
     text-shadow: 1px 1px 1px #ccc;
     vertical-align: top;
+}
 
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: inherit;
+    line-height: 1;
+    font-family: FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.footer-row-top > span {
+    display: block;
+    alignment: left;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.contact-info a i:hover {
+    animation: contact-info-rotate 3s infinite 1.2s;
+}
+
+.contact-info {
+    background-color: #e4e0e0;
+    display: block;
+}
+
+.footer-row-top {
+
+}
+
+.background {
+    background-size: cover;
+    background-color: rgb(212, 209, 209);
+    background-repeat: no-repeat;
+}
+
+.copyright-wrapper {
+    background-size: cover;
+    background-color: #F5F5F5;
+    background-repeat: no-repeat;
+}
+
+.copyright {
+    display: block;
+    float: left;
+    margin: 20px;
+    font-family: "Open Sans", sans-serif;
+    size: 1em;
+    text-shadow: 1px 1px 1px #ccc;
+    vertical-align: top;
+    Position: relative;
+}
+
+.rotate {
+    animation: contact-info-rotate 2s 0.4s 5;
+}
+
+@keyframes contact-info-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(365deg);
+    }
 }
 
 nav {
@@ -169,19 +253,6 @@ nav a {
 
 }
 
-.background {
-    background-image: url('../images/footer-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.copyright {
-    display: inline-block;
-    margin: 20px;
-    text-shadow: 1px 1px 1px #ccc;
-    vertical-align: top;
-}
-
 /* Work Experience
 -------------------------*/
 .work {
@@ -196,7 +267,7 @@ h3 ~ p {
 -------------------------*/
 .education {
     background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
-    url(https://images.unsplash.com/photo-1519429753079-3b0f0a95dea8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat fixed;
+    url('../images/night-sofia.jpg') no-repeat fixed;
     background-size: cover;
 }
 
@@ -224,7 +295,8 @@ h3 ~ p {
     }
 
     .profile-img {
-        width: 25%;
+        width: 20%;
+        display: inline;
     }
 
     h1, h2 {
@@ -242,7 +314,7 @@ h3 ~ p {
 
 @media (max-width: 660px) {
     .profile-img {
-        width: 45%;
+        width: 20%;
     }
 
     h1, h2 {
@@ -262,82 +334,6 @@ h3 ~ p {
         font-weight: 100;
     }
 }
-
-/* SNow*/
-h1 {
-    font-family: 'Corben', cursive;
-    font-size: 6rem;
-    color: white;
-    letter-spacing: 0.1rem;
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66);
-}
-
-.hero {
-/ / min-height: 100 vh;
-    min-height: 30rem;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.snow {
-    position: absolute;
-    min-width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.snow .svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#snow-top-layer {
-    will-change: transform;
-    transform: translateY(-768px);
-    animation: fall 22.5s infinite linear;
-}
-
-#snow-bottom-layer {
-    will-change: transform;
-    transform: translateY(-768px);
-    animation: fall 45s infinite linear;
-}
-
-@keyframes fall {
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes routateButton {
-    0% {
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-
-}
-
-.fa-arrow-alt-circle-down {
-    animation: routateButton;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-}
-
 
 
 
